@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Avatars</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ababab;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #avatarContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            max-width: 80%; /* Adjust the maximum width as needed */
+            margin: 0 auto;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div id="avatarContainer"></div>
