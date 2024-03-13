@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const avatarContainer = document.getElementById('avatarContainer');
     const totalPics = 99999999;
-
     let picsnow = 0;
 
     function loadPictures() {
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
             loadPictures();
         }
         else {
-            observer.unobserve(document.getElementById('loadTrigger'));
             return;
         }
     }
