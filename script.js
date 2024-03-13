@@ -1,21 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
     const avatarContainer = document.getElementById('avatarContainer');
-    const totalPics = 999999999999;
-    let currentId = 1;
+    const totalPics = 99999999;
+
+    let picsnow = 0;
 
     function loadPictures() {
+        let currentId = Math.floor(Math.random() * totalPics) + 1;
         const avatarURL = `https://avatars.githubusercontent.com/u/${currentId}?v=4`;
 
         const imgElement = document.createElement('img');
         imgElement.src = avatarURL;
-        imgElement.alt = `Avatar ${currentId}`;
-
         avatarContainer.appendChild(imgElement);
-        currentId++;
+        picsnow++;
+        console.log(picsnow);
 
         // Load the next picture when the current one is appended
-        if (currentId <= totalPics) {
+        if (picsnow <= totalPics) {
             loadPictures();
+        }
+        else {
+            observer.unobserve(document.getElementById('loadTrigger'));
+            return;
         }
     }
 
