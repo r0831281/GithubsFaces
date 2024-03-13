@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const avatarContainer = document.getElementById('avatarContainer');
-    const totalPics = 99999999;
+    const totalPics = 999999999999;
     let currentId = 1;
 
     function loadPictures() {
