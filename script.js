@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const imgElement = document.createElement('img');
         imgElement.src = avatarURL;
-        imgElement.width = 40;
-        imgElement.height = 40;
+        imgElement.alt = `Avatar ${currentId}`;
 
         avatarContainer.appendChild(imgElement);
         currentId++;
